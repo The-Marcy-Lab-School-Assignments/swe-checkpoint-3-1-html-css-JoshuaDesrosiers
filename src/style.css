@@ -1,19 +1,101 @@
 /* -------------------------------- */
 /* ---------- CSS Reset ----------- */
 /* -------------------------------- */
-
+:root{
+  --standard-gap:40px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
-
+html,body{
+  background: #000;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  gap: var(--standard-gap);
+}
 ul {
   list-style: none;
 }
-
 img {
   width: 100%;
 }
 
+.logo{
+  width:100px;
+  margin-right: auto;
+}
 /* Add your styles below */
+nav ul{
+  align-items: center;
+  display: flex;
+  gap:15px;
+  padding: 10px;
+  border-bottom: solid grey 1px;
+}
+a:hover{
+  text-decoration: underline;
+}
+nav .active{
+  text-decoration: underline;
+}
+.pfp{
+  max-width: 300px;
+  border-radius: 9999999999px;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  gap: var(--standard-gap);
+  align-items: center;
+  justify-content: center;
+}
+p{
+  font-weight: 300;
+}
+.stats{
+  display: flex;
+  gap: 10px;
+}
+strong{
+  font-weight: 600;
+}
+.pfdesc{
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 500px;
+}
+.pfdesc>p{
+  line-height: 1.5;
+}
+section{
+  margin-left: auto;
+  margin-right: auto;
+}
+main ul{
+  display: grid;
+  gap: 20px;
+  padding: var(--standard-gap);
+}
+@media (width >= 768px){
+header{
+  flex-direction: row;
+}
+main ul{
+  grid-template-columns: 1fr 1fr;
+}
+}
+@media (width >= 992px){
+header{
+  flex-direction: row;
+}
+main ul{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
